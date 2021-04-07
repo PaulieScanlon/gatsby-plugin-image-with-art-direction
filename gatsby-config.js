@@ -31,6 +31,7 @@ module.exports = {
         }
       }
     },
+    `gatsby-plugin-gatsby-cloud`,
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-theme-ui`
