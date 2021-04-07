@@ -1,37 +1,41 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage, getImage, withArtDirection } from 'gatsby-plugin-image';
 import { Box } from 'theme-ui';
 
 import theme from '../gatsby-plugin-theme-ui';
 
-import useLemon from '../hooks/useLemon';
+const min = parseInt(theme.breakpoints[0], 10);
 
-const Lemon = ({ nodes }) => {
-  const lemonQuery = useLemon();
-  const [frames, setFrames] = useState([]);
-  const [images, setImages] = useState(null);
-
-  useEffect(() => {
-    setFrames([].concat(...new Array(30).fill(lemonQuery)));
-  }, [lemonQuery]);
-
-  useEffect(() => {
-    const min = parseInt(theme.breakpoints[0], 10);
-
-    if (frames.length > 0) {
-      setImages(
-        withArtDirection(
-          getImage(frames[0]),
-          frames.map((frame, index) => {
-            return {
-              media: `(max-width: ${min + index}px)`,
-              image: getImage(frame)
-            };
-          })
-        )
-      );
+const Lemon = () => {
+  const {
+    allFile: { nodes }
+  } = useStaticQuery(graphql`
+    query {
+      allFile(
+        filter: { sourceInstanceName: { eq: "lemon" }, ext: { eq: ".jpg" } }
+        sort: { fields: name, order: DESC }
+      ) {
+        nodes {
+          name
+          sourceInstanceName
+          childImageSharp {
+            gatsbyImageData(layout: FULL_WIDTH)
+          }
+        }
+      }
     }
-  }, [frames]);
+  `);
+
+  const images = withArtDirection(
+    getImage(nodes[0]),
+    [].concat(...new Array(29).fill(nodes)).map((frame, index) => {
+      return {
+        media: `(max-width: ${min + index}px)`,
+        image: getImage(frame)
+      };
+    })
+  );
 
   return (
     <Box

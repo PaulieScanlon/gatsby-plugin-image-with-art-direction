@@ -4,7 +4,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: 'lemon',
-        path: `${__dirname}/src/frames/lemon`
+        path: `${__dirname}/src/images/lemon`
       }
     },
     {

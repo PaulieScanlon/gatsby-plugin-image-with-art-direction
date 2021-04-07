@@ -9,10 +9,10 @@ import Lemon from '../components/lemon';
 
 # animation
 
-This example uses 576 media queries, one for each `max-width` px value from 576px up to 2015px.
+This example uses 1,391 media queries, one for each `max-width` px value from 576px up to 1967px.
 
 As each mediaQuery
-kicks in the _next_ or _previous_ image from the `srcSet` is loaded by the browser and then displayed.
+kicks in, the _next_ or _previous_ image from the `srcSet` is loaded by the browser and then displayed.
 
 The flickering is caused because the browser has to load the image before it is displayed. Time to load speeds may vary but
 once each image is cached the flickering may become less obvious.
@@ -28,7 +28,7 @@ The `src` for this example can be found <Link href="https://github.com/PaulieSca
 
 <Box
   sx={{
-    px: [0, 3, 6]
+    px: [0, 3, 3, 6]
   }}
 >
   <Card variant="cards.secondary">
