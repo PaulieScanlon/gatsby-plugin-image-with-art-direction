@@ -1,0 +1,70 @@
+import { Link as GatsbyLink } from 'gatsby';
+import {
+  Link,
+  Grid,
+  Box,
+  Card,
+  Divider,
+  Heading,
+  Text,
+  Image,
+  Button
+} from 'theme-ui';
+
+# withArtDirection
+
+_By default, the plugin displays different image resolutions at different screen sizes, but it also supports **art direction**, which is where a visually-different image is displayed at different size_ - [Gatsby docs](https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-plugin-image/#withartdirection)
+
+<Divider />
+
+## examples
+
+Here are some examples of how you could use [withArtDirection](https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-plugin-image/#withartdirection)
+
+<Grid
+  sx={{
+    gridTemplateColumns: 'auto 1fr',
+    gap: 2
+  }}
+>
+  <span aria-label="Warning">⚠️</span>
+  <Text sx={{ color: 'red', fontWeight: 'bold' }}>
+    In all examples you’ll need to resize your browsers width to see the changes
+  </Text>
+</Grid>
+
+<Divider />
+
+<Card>
+  <Link as={GatsbyLink} to="/animation">
+    <Box variant="cards.body">
+      <Grid
+        sx={{
+          alignItems: 'flex-end',
+          gridTemplateColumns: '1fr auto'
+        }}
+      >
+        <Grid
+          sx={{
+            alignItems: 'center',
+            gridTemplateColumns: 'auto 1fr'
+          }}
+        >
+          <Image alt="tomato-thumbnail" src="./images/lemon-thumbnail.jpg" />
+          <Box>
+            <Heading as="h3" variant="styles.h3">
+              Animation
+            </Heading>
+            <Text>
+              This example will iterate through frames of an animation walk
+              cycle.{' '}
+            </Text>
+          </Box>
+        </Grid>
+        <Box>
+          <Button>VIEW EXAMPLE</Button>
+        </Box>
+      </Grid>
+    </Box>
+  </Link>
+</Card>

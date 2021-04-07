@@ -1,0 +1,57 @@
+import { Link as GatsbyLink } from 'gatsby';
+import { Card, Box, Link, Divider, Heading, Text } from 'theme-ui';
+
+import Lemon from '../components/lemon';
+
+<Link as={GatsbyLink} variant="styles.back" to="/">
+  <span aria-label="Backhand Index Pointing Left">👈</span> Back
+</Link>
+
+# animation
+
+This example uses 576 media queries, one for each `max-width` px value from 576px up to 2015px.
+
+As each mediaQuery
+kicks in the _next_ or _previous_ image from the `srcSet` is loaded by the browser and then displayed.
+
+The flickering is caused because the browser has to load the image before it is displayed. Time to load speeds may vary but
+once each image is cached the flickering may become less obvious.
+
+Since each image is **only** loaded by the browser when the appropriate mediaQuery matches the viewport it shouldn’t
+effect Lighthouse scores or page load times
+
+I'm not sure why you'd want to use this effect, but just so you know... you can 🤷‍♂️
+
+The `src` for this example can be found <Link href="https://github.com/PaulieScanlon" target="_blank" rel="noopener">here</Link>
+
+<Divider />
+
+<Box
+  sx={{
+    px: [0, 3, 6]
+  }}
+>
+  <Card variant="cards.secondary">
+    <Lemon />
+    <Box variant="cards.body">
+      <Heading as="h2" variant="styles.h2">
+        Lemon
+      </Heading>
+      <Text as="div" sx={{ mb: 2 }}>
+        Animation by <Text sx={{ fontWeight: 'bold' }}>Luke Roberts</Text>
+      </Text>
+      <Box>
+        <Link
+          href="https://dribbble.com/lukeroberts"
+          target="_blank"
+          rel="noopener"
+          variant="styles.a"
+        >
+          https://dribbble.com/lukeroberts
+        </Link>
+      </Box>
+    </Box>
+  </Card>
+</Box>
+
+<Divider />
