@@ -1,0 +1,59 @@
+import { Link as GatsbyLink } from 'gatsby';
+import { Grid, Card, Box, Link, Divider, Heading, Text } from 'theme-ui';
+
+import DesktopFirst from '../components/desktop-first';
+
+<Link as={GatsbyLink} variant="styles.back" to="/">
+  <span aria-label="Backhand Index Pointing Left">👈</span> Back
+</Link>
+
+# Desktop First
+
+Clients will often say "We don't need to support mobile"
+
+If that's the case they won't mind if you switch the image out for something different on smaller screens.
+
+<Divider />
+
+<Box
+  sx={{
+    px: [0, 3, 3, 6]
+  }}
+>
+  <Card variant="cards.secondary">
+    <DesktopFirst />
+    <Box variant="cards.body">
+      <Heading as="h2" variant="styles.h2">
+        Desktop First
+      </Heading>
+      <Text as="div" sx={{ mb: 2 }}>
+        Photos by <Text sx={{ fontWeight: 'bold' }}>C D-X</Text> and{' '}
+        <Text sx={{ fontWeight: 'bold' }}>Karsten Winegeart</Text>
+      </Text>
+      <Grid
+        sx={{
+          gap: 0
+        }}
+      >
+        <Link
+          href="https://unsplash.com/@cdx2"
+          target="_blank"
+          rel="noopener"
+          variant="styles.a"
+        >
+          https://unsplash.com/@cdx2
+        </Link>
+        <Link
+          href="https://unsplash.com/@karsten116"
+          target="_blank"
+          rel="noopener"
+          variant="styles.a"
+        >
+          https://unsplash.com/@karsten116
+        </Link>
+      </Grid>
+    </Box>
+  </Card>
+</Box>
+
+<Divider />

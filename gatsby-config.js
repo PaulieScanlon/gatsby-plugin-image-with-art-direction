@@ -8,6 +8,13 @@ module.exports = {
       }
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: 'desktop-first',
+        path: `${__dirname}/src/images/desktop-first`
+      }
+    },
+    {
       resolve: `gatsby-plugin-sharp`,
       options: {
         quality: 70,

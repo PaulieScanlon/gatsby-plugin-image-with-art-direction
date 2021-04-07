@@ -4,15 +4,17 @@ import { GatsbyImage, getImage, withArtDirection } from 'gatsby-plugin-image';
 import { Box } from 'theme-ui';
 
 import theme from '../gatsby-plugin-theme-ui';
-const min = parseInt(theme.breakpoints[0], 10);
 
-const Lemon = () => {
+const DesktopFirst = () => {
   const {
     allFile: { nodes }
   } = useStaticQuery(graphql`
     query {
       allFile(
-        filter: { sourceInstanceName: { eq: "lemon" }, ext: { eq: ".jpg" } }
+        filter: {
+          sourceInstanceName: { eq: "desktop-first" }
+          ext: { eq: ".jpg" }
+        }
         sort: { fields: name, order: DESC }
       ) {
         nodes {
@@ -26,28 +28,25 @@ const Lemon = () => {
     }
   `);
 
-  const images = withArtDirection(
-    getImage(nodes[0]),
-    [].concat(...new Array(29).fill(nodes)).map((frame, index) => {
-      return {
-        media: `(max-width: ${min + index}px)`,
-        image: getImage(frame)
-      };
-    })
-  );
+  const images = withArtDirection(getImage(nodes[0]), [
+    {
+      media: `(max-width: ${parseInt(theme.breakpoints[0], 10)}px)`,
+      image: getImage(nodes[1])
+    }
+  ]);
 
   return (
     <Box
       sx={{
-        backgroundColor: 'lemon',
+        backgroundColor: 'desktopFirst',
         img: {
-          backgroundColor: 'lemon'
+          backgroundColor: 'desktopFirst'
         }
       }}
     >
-      {images ? <GatsbyImage alt="tomato" image={images} /> : null}
+      {images ? <GatsbyImage alt="product" image={images} /> : null}
     </Box>
   );
 };
 
-export default Lemon;
+export default DesktopFirst;

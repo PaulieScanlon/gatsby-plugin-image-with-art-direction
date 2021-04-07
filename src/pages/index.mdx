@@ -35,6 +35,8 @@ Here are some examples of how you could use [withArtDirection](https://www.gatsb
 
 <Divider />
 
+<Grid>
+
 <Card>
   <Link as={GatsbyLink} to="/animation">
     <Box variant="cards.body">
@@ -57,7 +59,7 @@ Here are some examples of how you could use [withArtDirection](https://www.gatsb
             </Heading>
             <Text>
               This example will iterate through frames of an animation walk
-              cycle.{' '}
+              cycle
             </Text>
           </Box>
         </Grid>
@@ -68,3 +70,39 @@ Here are some examples of how you could use [withArtDirection](https://www.gatsb
     </Box>
   </Link>
 </Card>
+
+<Card>
+  <Link as={GatsbyLink} to="/desktop-first">
+    <Box variant="cards.body">
+      <Grid
+        sx={{
+          alignItems: 'flex-end',
+          gridTemplateColumns: '1fr auto'
+        }}
+      >
+        <Grid
+          sx={{
+            alignItems: 'center',
+            gridTemplateColumns: 'auto 1fr'
+          }}
+        >
+          <Image
+            alt="tomato-thumbnail"
+            src="./images/desktop-first-thumbnail.jpg"
+          />
+          <Box>
+            <Heading as="h3" variant="styles.h3">
+              Desktop First
+            </Heading>
+            <Text>This example will display two different images</Text>
+          </Box>
+        </Grid>
+        <Box>
+          <Button>VIEW EXAMPLE</Button>
+        </Box>
+      </Grid>
+    </Box>
+  </Link>
+</Card>
+
+</Grid>

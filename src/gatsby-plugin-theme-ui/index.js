@@ -5,8 +5,9 @@ const theme = {
     lightGrey: '#dddddd',
     white: '#ffffff',
     primary: '#3300cc',
+    error: '#ff0000',
     lemon: '#3c82f0',
-    error: '#ff0000'
+    desktopFirst: '#FEE46D'
   },
 
   breakpoints: ['576px', '768px', '992px', '1200px', '1400px'],
