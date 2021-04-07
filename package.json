@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-image-experiment",
+  "name": "gatsby-plugin-image-with-art-direction",
   "version": "1.0.0",
-  "description": "A experiment using Gatsby Image",
+  "description": "A experiment using Gatsby Image and 'withArtDirection'",
   "main": "index.js",
   "scripts": {
     "develop": "gatsby develop",
@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PaulieScanlon/gatsby-image-experiment.git"
+    "url": "git+https://github.com/PaulieScanlon/gatsby-plugin-image-with-art-direction.git"
   },
   "author": "Paul Scanlon",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/PaulieScanlon/gatsby-image-experiment/issues"
+    "url": "https://github.com/PaulieScanlon/gatsby-plugin-image-with-art-direction/issues"
   },
-  "homepage": "https://github.com/PaulieScanlon/gatsby-image-experiment#readme",
+  "homepage": "https://github.com/PaulieScanlon/gatsby-plugin-image-with-art-direction#readme",
   "dependencies": {
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
