@@ -125,7 +125,12 @@ const theme = {
       }
     },
     secondary: {
-      variant: 'cards.default'
+      variant: 'cards.default',
+      transition: '.2s linear padding',
+      mx: [0, 3, 3, 6],
+      '@media print': {
+        mx: 6
+      }
     },
     body: {
       p: 4

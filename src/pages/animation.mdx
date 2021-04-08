@@ -21,49 +21,30 @@ effect Lighthouse scores or page load times
 
 I'm not sure why you'd want to use this effect, but just so you know... you can 🤷‍♂️
 
-```javascript
-const images = withArtDirection(
-  getImage(nodes[0]),
-  [].concat(...new Array(29).fill(nodes)).map((frame, index) => {
-    return {
-      media: `(max-width: ${min + index}px)`,
-      image: getImage(frame)
-    };
-  })
-);
-```
-
 The `src` for this example can be found <Link href="https://github.com/PaulieScanlon/gatsby-plugin-image-with-art-direction/blob/main/src/components/lemon.js" target="_blank" rel="noopener">here</Link>
 
 <Divider />
 
-<Box
-  sx={{
-    transition: '.2s linear padding',
-    px: [0, 3, 3, 6]
-  }}
->
-  <Card variant="cards.secondary">
-    <Lemon />
-    <Box variant="cards.body">
-      <Heading as="h2" variant="styles.h2">
-        Lemon
-      </Heading>
-      <Text as="div" sx={{ mb: 2 }}>
-        Animation by <Text sx={{ fontWeight: 'bold' }}>Luke Roberts</Text>
-      </Text>
-      <Box>
-        <Link
-          href="https://dribbble.com/lukeroberts"
-          target="_blank"
-          rel="noopener"
-          variant="styles.a"
-        >
-          https://dribbble.com/lukeroberts
-        </Link>
-      </Box>
+<Card variant="cards.secondary">
+  <Lemon />
+  <Box variant="cards.body">
+    <Heading as="h2" variant="styles.h2">
+      Lemon
+    </Heading>
+    <Text as="div" sx={{ mb: 2 }}>
+      Animation by <Text sx={{ fontWeight: 'bold' }}>Luke Roberts</Text>
+    </Text>
+    <Box>
+      <Link
+        href="https://dribbble.com/lukeroberts"
+        target="_blank"
+        rel="noopener"
+        variant="styles.a"
+      >
+        https://dribbble.com/lukeroberts
+      </Link>
     </Box>
-  </Card>
-</Box>
+  </Box>
+</Card>
 
 <Divider />

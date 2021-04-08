@@ -12,59 +12,43 @@ It might sometimes be useful to display images of different aspect ratios on scr
 
 For example on larger screens that are normally _wider_ than they are _tall_ landscape images usually work best. However, on smaller screens that are _taller_ than they are _wide_ portrait images might be more suitable.
 
-```javascript
-const images = withArtDirection(getImage(nodes[0]), [
-  {
-    media: `(max-width: ${parseInt(theme.breakpoints[0], 10) - 1}px)`,
-    image: getImage(nodes[1])
-  }
-]);
-```
-
 The `src` for this example can be found <Link href="https://github.com/PaulieScanlon/gatsby-plugin-image-with-art-direction/blob/main/src/components/aspect-ratio.js" target="_blank" rel="noopener">here</Link>
 
 <Divider />
 
-<Box
-  sx={{
-    transition: '.2s linear padding',
-    px: [0, 3, 3, 6]
-  }}
->
-  <Card variant="cards.secondary">
-    <AspectRatio />
-    <Box variant="cards.body">
-      <Heading as="h2" variant="styles.h2">
-        Aspect Ratio
-      </Heading>
-      <Text as="div" sx={{ mb: 2 }}>
-        Photos by <Text sx={{ fontWeight: 'bold' }}>Mylon Ollila</Text> and{' '}
-        <Text sx={{ fontWeight: 'bold' }}>Sian Cooper</Text>
-      </Text>
-      <Grid
-        sx={{
-          gap: 0
-        }}
+<Card variant="cards.secondary">
+  <AspectRatio />
+  <Box variant="cards.body">
+    <Heading as="h2" variant="styles.h2">
+      Aspect Ratio
+    </Heading>
+    <Text as="div" sx={{ mb: 2 }}>
+      Photos by <Text sx={{ fontWeight: 'bold' }}>Mylon Ollila</Text> and{' '}
+      <Text sx={{ fontWeight: 'bold' }}>Sian Cooper</Text>
+    </Text>
+    <Grid
+      sx={{
+        gap: 0
+      }}
+    >
+      <Link
+        href="https://unsplash.com/@ollila"
+        target="_blank"
+        rel="noopener"
+        variant="styles.a"
       >
-        <Link
-          href="https://unsplash.com/@ollila"
-          target="_blank"
-          rel="noopener"
-          variant="styles.a"
-        >
-          https://unsplash.com/@ollila
-        </Link>
-        <Link
-          href="https://unsplash.com/@the_colourful_pixel"
-          target="_blank"
-          rel="noopener"
-          variant="styles.a"
-        >
-          https://unsplash.com/@the_colourful_pixel
-        </Link>
-      </Grid>
-    </Box>
-  </Card>
-</Box>
+        https://unsplash.com/@ollila
+      </Link>
+      <Link
+        href="https://unsplash.com/@the_colourful_pixel"
+        target="_blank"
+        rel="noopener"
+        variant="styles.a"
+      >
+        https://unsplash.com/@the_colourful_pixel
+      </Link>
+    </Grid>
+  </Box>
+</Card>
 
 <Divider />
