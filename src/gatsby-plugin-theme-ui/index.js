@@ -36,7 +36,12 @@ const theme = {
   radii: [0, 8],
 
   sizes: {
-    container: 840
+    container: 840,
+    full: '100%'
+  },
+
+  zIndices: {
+    header: '999'
   },
 
   styles: {
@@ -65,12 +70,13 @@ const theme = {
     back: {
       variant: 'style.a'
     },
-    main: {
-      mt: 5
-    },
     header: {
-      p: 3,
       boxShadow: 0,
+      backgroundColor: 'white',
+      p: 3,
+      position: 'fixed',
+      width: 'full',
+      zIndex: 'header',
       a: {
         variant: 'style.a',
         textDecoration: 'none',
@@ -84,7 +90,8 @@ const theme = {
   },
   layout: {
     container: {
-      p: 3
+      px: 3,
+      pt: '90px'
     }
   },
 
