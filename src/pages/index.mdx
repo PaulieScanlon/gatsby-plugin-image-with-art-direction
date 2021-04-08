@@ -11,6 +11,8 @@ import {
   Button
 } from 'theme-ui';
 
+import ClickableCard from '../components/clickable-card';
+
 # withArtDirection
 
 [withArtDirection](https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-plugin-image/#withartdirection) is one of the helper functions that ships with [gatsby-plugin-image](https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-plugin-image/)
@@ -38,147 +40,33 @@ Here are some examples of how you could use [withArtDirection](https://www.gatsb
 
 <Grid>
 
-<Card>
-  <Link as={GatsbyLink} to="/animation">
-    <Box variant="cards.body">
-      <Grid
-        sx={{
-          alignItems: 'flex-end',
-          gridTemplateColumns: '1fr auto'
-        }}
-      >
-        <Grid
-          sx={{
-            alignItems: 'center',
-            gridTemplateColumns: 'auto 1fr'
-          }}
-        >
-          <Image alt="lemon-thumbnail" src="./images/lemon-thumbnail.jpg" />
-          <Box>
-            <Heading as="h3" variant="styles.h3">
-              Animation
-            </Heading>
-            <Text>
-              This example will iterate through frames of an animation walk
-              cycle
-            </Text>
-          </Box>
-        </Grid>
-        <Box>
-          <Button>VIEW EXAMPLE</Button>
-        </Box>
-      </Grid>
-    </Box>
-  </Link>
-</Card>
+<ClickableCard
+  to="animation"
+  thumbnail="lemon-thumbnail"
+  title="Animation"
+  body="This example will iterate through frames of an animation walk cycle"
+/>
 
-<Card>
-  <Link as={GatsbyLink} to="/aspect-ratio">
-    <Box variant="cards.body">
-      <Grid
-        sx={{
-          alignItems: 'flex-end',
-          gridTemplateColumns: '1fr auto'
-        }}
-      >
-        <Grid
-          sx={{
-            alignItems: 'center',
-            gridTemplateColumns: 'auto 1fr'
-          }}
-        >
-          <Image
-            alt="aspect-ratio-thumbnail"
-            src="./images/aspect-ratio-thumbnail.jpg"
-          />
-          <Box>
-            <Heading as="h3" variant="styles.h3">
-              Aspect Ratio
-            </Heading>
-            <Text>
-              This example will display two different images of different aspect
-              ratios
-            </Text>
-          </Box>
-        </Grid>
-        <Box>
-          <Button>VIEW EXAMPLE</Button>
-        </Box>
-      </Grid>
-    </Box>
-  </Link>
-</Card>
+<ClickableCard
+  to="aspect-ratio"
+  thumbnail="aspect-ratio-thumbnail"
+  title="Aspect Ratio"
+  body="This example will display two different images of different aspect ratios"
+/>
 
-<Card>
-  <Link as={GatsbyLink} to="/desktop-first">
-    <Box variant="cards.body">
-      <Grid
-        sx={{
-          alignItems: 'flex-end',
-          gridTemplateColumns: '1fr auto'
-        }}
-      >
-        <Grid
-          sx={{
-            alignItems: 'center',
-            gridTemplateColumns: 'auto 1fr'
-          }}
-        >
-          <Image
-            alt="desktop-first-thumbnail"
-            src="./images/desktop-first-thumbnail.jpg"
-          />
-          <Box>
-            <Heading as="h3" variant="styles.h3">
-              Desktop First
-            </Heading>
-            <Text>
-              This example will display two different images with the same
-              aspect ratio
-            </Text>
-          </Box>
-        </Grid>
-        <Box>
-          <Button>VIEW EXAMPLE</Button>
-        </Box>
-      </Grid>
-    </Box>
-  </Link>
-</Card>
+<ClickableCard
+  to="desktop-first"
+  thumbnail="desktop-first-thumbnail"
+  title="Desktop First"
+  body="This example will display two different images with the same aspect ratio"
+/>
 
-<Card>
-  <Link as={GatsbyLink} to="/printer">
-    <Box variant="cards.body">
-      <Grid
-        sx={{
-          alignItems: 'flex-end',
-          gridTemplateColumns: '1fr auto'
-        }}
-      >
-        <Grid
-          sx={{
-            alignItems: 'center',
-            gridTemplateColumns: 'auto 1fr'
-          }}
-        >
-          <Image alt="printer-thumbnail" src="./images/printer-thumbnail.jpg" />
-          <Box>
-            <Heading as="h3" variant="styles.h3">
-              Printer
-            </Heading>
-            <Text>
-              This example will display a different image when the page is
-              printed
-            </Text>
-          </Box>
-        </Grid>
-        <Box>
-          <Button>VIEW EXAMPLE</Button>
-        </Box>
-      </Grid>
-    </Box>
-  </Link>
-</Card>
+<ClickableCard
+  to="printer"
+  thumbnail="printer-thumbnail"
+  title="Printer"
+  body="This example will display a different image when the page is printed"
+/>
 
 </Grid>
 
