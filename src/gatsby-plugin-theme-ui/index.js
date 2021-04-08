@@ -13,8 +13,8 @@ const theme = {
   breakpoints: ['576px', '768px', '992px', '1200px', '1400px'],
 
   fonts: {
-    body: 'system-ui',
-    heading: 'system-ui'
+    body: 'system-ui, "arial"',
+    heading: 'system-ui, "arial"'
   },
 
   fontWeights: {
