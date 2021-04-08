@@ -53,7 +53,8 @@ const theme = {
       p: 3,
       borderRadius: 1,
       backgroundColor: 'lightGrey',
-      fontSize: 0
+      fontSize: 0,
+      overflow: 'auto'
     },
     p: {
       code: {
