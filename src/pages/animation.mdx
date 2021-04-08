@@ -12,22 +12,21 @@ import Lemon from '../components/lemon';
 This example uses 1,391 media queries, one for each `max-width` px value from 576px up to 1967px.
 
 As each mediaQuery
-kicks in, the _next_ or _previous_ image from the `srcSet` is loaded by the browser and then displayed.
+kicks in, the _next_ or _previous_ image from the `<source />` is loaded by the browser and then displayed.
 
 The flickering is caused because the browser has to load the image before it is displayed. Time to load speeds may vary but
-once each image is cached the flickering may become less obvious.
+once each image is cached the flickering may become less obvious. Firefox seems slightly better at handling this than Chrome FYI
 
 Since each image is **only** loaded by the browser when the appropriate mediaQuery matches the viewport it shouldn’t
 effect Lighthouse scores or page load times
 
 I'm not sure why you'd want to use this effect, but just so you know... you can 🤷‍♂️
 
-The `src` for this example can be found <Link href="https://github.com/PaulieScanlon/gatsby-plugin-image-with-art-direction/blob/main/src/components/lemon.js" target="_blank" rel="noopener">here</Link>
-
 <Divider />
 
 <Box
   sx={{
+    transition: '.2s linear padding',
     px: [0, 3, 3, 6]
   }}
 >

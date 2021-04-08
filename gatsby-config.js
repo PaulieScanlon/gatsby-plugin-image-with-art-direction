@@ -15,12 +15,18 @@ module.exports = {
       }
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: 'aspect-ratio',
+        path: `${__dirname}/src/images/aspect-ratio`
+      }
+    },
+    {
       resolve: `gatsby-plugin-sharp`,
       options: {
         quality: 70,
         formats: ['auto', 'webp', 'avif'],
-        placeholder: 'dominantColor',
-        width: 200
+        placeholder: 'dominantColor'
       }
     },
     {

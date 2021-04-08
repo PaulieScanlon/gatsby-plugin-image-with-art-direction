@@ -1,17 +1,17 @@
 import { Link as GatsbyLink } from 'gatsby';
 import { Grid, Card, Box, Link, Divider, Heading, Text } from 'theme-ui';
 
-import DesktopFirst from '../components/desktop-first';
+import AspectRatio from '../components/aspect-ratio';
 
 <Link as={GatsbyLink} variant="styles.back" to="/">
   <span aria-label="Backhand Index Pointing Left">👈</span> Back
 </Link>
 
-# Desktop First
+# Aspect Ratio
 
-Clients will often say "We don't need to support mobile"
+It might sometimes be useful to display images of different aspect ratios on screens with a similar aspect ratio.
 
-If that's the case they won't mind if you switch the image out for something different on smaller screens.
+For example on larger screens that are normally _wider_ than they are _tall_ landscape images usually work best. However, on smaller screens that are _taller_ than they are _wide_ portrait images might be more suitable.
 
 <Divider />
 
@@ -22,14 +22,14 @@ If that's the case they won't mind if you switch the image out for something dif
   }}
 >
   <Card variant="cards.secondary">
-    <DesktopFirst />
+    <AspectRatio />
     <Box variant="cards.body">
       <Heading as="h2" variant="styles.h2">
-        Desktop First
+        Aspect Ratio
       </Heading>
       <Text as="div" sx={{ mb: 2 }}>
-        Photos by <Text sx={{ fontWeight: 'bold' }}>C D-X</Text> and{' '}
-        <Text sx={{ fontWeight: 'bold' }}>Karsten Winegeart</Text>
+        Photos by <Text sx={{ fontWeight: 'bold' }}>Mylon Ollila</Text> and{' '}
+        <Text sx={{ fontWeight: 'bold' }}>Sian Cooper</Text>
       </Text>
       <Grid
         sx={{
@@ -37,20 +37,20 @@ If that's the case they won't mind if you switch the image out for something dif
         }}
       >
         <Link
-          href="https://unsplash.com/@cdx2"
+          href="https://unsplash.com/@ollila"
           target="_blank"
           rel="noopener"
           variant="styles.a"
         >
-          https://unsplash.com/@cdx2
+          https://unsplash.com/@ollila
         </Link>
         <Link
-          href="https://unsplash.com/@karsten116"
+          href="https://unsplash.com/@the_colourful_pixel"
           target="_blank"
           rel="noopener"
           variant="styles.a"
         >
-          https://unsplash.com/@karsten116
+          https://unsplash.com/@the_colourful_pixel
         </Link>
       </Grid>
     </Box>

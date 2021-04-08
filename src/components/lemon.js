@@ -37,16 +37,7 @@ const Lemon = () => {
   );
 
   return (
-    <Box
-      sx={{
-        backgroundColor: 'lemon',
-        img: {
-          backgroundColor: 'lemon'
-        }
-      }}
-    >
-      {images ? <GatsbyImage alt="tomato" image={images} /> : null}
-    </Box>
+    <Box>{images ? <GatsbyImage alt="tomato" image={images} /> : null}</Box>
   );
 };
 

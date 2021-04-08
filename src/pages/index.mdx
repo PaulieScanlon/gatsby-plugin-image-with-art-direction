@@ -13,9 +13,9 @@ import {
 
 # withArtDirection
 
-[withArtDirection](https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-plugin-image/#withartdirection) is one of Helper Functions that ships with [gatsby-plugin-image](https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-plugin-image/)
+[withArtDirection](https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-plugin-image/#withartdirection) is one of the helper functions that ships with [gatsby-plugin-image](https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-plugin-image/)
 
-_By default, the plugin displays different image resolutions at different screen sizes, but it also supports **art direction**, which is where a visually-different image is displayed at different size_
+_By default, the plugin displays different image resolutions at different screen sizes, but it also supports **art direction**, which is where a visually-different image is displayed at different sizes_
 
 ## examples
 
@@ -29,13 +29,51 @@ Here are some examples of how you could use [withArtDirection](https://www.gatsb
 >
   <span aria-label="Warning">⚠️</span>
   <Text sx={{ color: 'red', fontWeight: 'bold' }}>
-    In all examples you’ll need to resize your browsers width to see the changes
+    With all examples you’ll need to resize your browsers width to see the
+    changes
   </Text>
 </Grid>
 
 <Divider />
 
 <Grid>
+
+<Card>
+  <Link as={GatsbyLink} to="/aspect-ratio">
+    <Box variant="cards.body">
+      <Grid
+        sx={{
+          alignItems: 'flex-end',
+          gridTemplateColumns: '1fr auto'
+        }}
+      >
+        <Grid
+          sx={{
+            alignItems: 'center',
+            gridTemplateColumns: 'auto 1fr'
+          }}
+        >
+          <Image
+            alt="tomato-thumbnail"
+            src="./images/aspect-ratio-thumbnail.jpg"
+          />
+          <Box>
+            <Heading as="h3" variant="styles.h3">
+              Aspect Ratio
+            </Heading>
+            <Text>
+              This example will display two different images of different aspect
+              ratios
+            </Text>
+          </Box>
+        </Grid>
+        <Box>
+          <Button>VIEW EXAMPLE</Button>
+        </Box>
+      </Grid>
+    </Box>
+  </Link>
+</Card>
 
 <Card>
   <Link as={GatsbyLink} to="/animation">
@@ -94,7 +132,10 @@ Here are some examples of how you could use [withArtDirection](https://www.gatsb
             <Heading as="h3" variant="styles.h3">
               Desktop First
             </Heading>
-            <Text>This example will display two different images</Text>
+            <Text>
+              This example will display two different images with the same
+              aspect ratio
+            </Text>
           </Box>
         </Grid>
         <Box>
@@ -106,3 +147,7 @@ Here are some examples of how you could use [withArtDirection](https://www.gatsb
 </Card>
 
 </Grid>
+
+<Divider />
+
+The `src` for these examples can be found here: <Link href="https://github.com/PaulieScanlon/gatsby-plugin-image-with-art-direction" target="_blank" rel="noopener">https://github.com/PaulieScanlon/gatsby-plugin-image-with-art-direction</Link>
