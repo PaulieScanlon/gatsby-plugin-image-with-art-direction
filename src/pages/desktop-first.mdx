@@ -13,6 +13,17 @@ Clients will often say "We don't need to support mobile"
 
 If that's the case they won't mind if you switch the image out for something different on smaller screens.
 
+```javascript
+const images = withArtDirection(getImage(nodes[0]), [
+  {
+    media: `(max-width: ${parseInt(theme.breakpoints[0], 10)}px)`,
+    image: getImage(nodes[1])
+  }
+]);
+```
+
+The `src` for this example can be found <Link href="https://github.com/PaulieScanlon/gatsby-plugin-image-with-art-direction/blob/main/src/components/desktop-first.js" target="_blank" rel="noopener">here</Link>
+
 <Divider />
 
 <Box

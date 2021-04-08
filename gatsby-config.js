@@ -22,6 +22,13 @@ module.exports = {
       }
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: 'printer',
+        path: `${__dirname}/src/images/printer`
+      }
+    },
+    {
       resolve: `gatsby-plugin-sharp`,
       options: {
         quality: 70,
@@ -29,6 +36,7 @@ module.exports = {
         placeholder: 'dominantColor'
       }
     },
+
     {
       resolve: `gatsby-plugin-mdx`,
       options: {

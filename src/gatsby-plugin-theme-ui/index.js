@@ -49,12 +49,16 @@ const theme = {
       color: 'primary',
       cursor: 'pointer'
     },
+    pre: {
+      p: 3,
+      borderRadius: 1,
+      backgroundColor: 'lightGrey',
+      fontSize: 0
+    },
     p: {
       code: {
-        p: 1,
-        borderRadius: 1,
-        backgroundColor: 'lightGrey',
-        fontSize: 0
+        variant: 'styles.pre',
+        p: 1
       }
     },
     back: {

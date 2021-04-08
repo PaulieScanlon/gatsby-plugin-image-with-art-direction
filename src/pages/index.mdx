@@ -39,6 +39,40 @@ Here are some examples of how you could use [withArtDirection](https://www.gatsb
 <Grid>
 
 <Card>
+  <Link as={GatsbyLink} to="/animation">
+    <Box variant="cards.body">
+      <Grid
+        sx={{
+          alignItems: 'flex-end',
+          gridTemplateColumns: '1fr auto'
+        }}
+      >
+        <Grid
+          sx={{
+            alignItems: 'center',
+            gridTemplateColumns: 'auto 1fr'
+          }}
+        >
+          <Image alt="lemon-thumbnail" src="./images/lemon-thumbnail.jpg" />
+          <Box>
+            <Heading as="h3" variant="styles.h3">
+              Animation
+            </Heading>
+            <Text>
+              This example will iterate through frames of an animation walk
+              cycle
+            </Text>
+          </Box>
+        </Grid>
+        <Box>
+          <Button>VIEW EXAMPLE</Button>
+        </Box>
+      </Grid>
+    </Box>
+  </Link>
+</Card>
+
+<Card>
   <Link as={GatsbyLink} to="/aspect-ratio">
     <Box variant="cards.body">
       <Grid
@@ -54,7 +88,7 @@ Here are some examples of how you could use [withArtDirection](https://www.gatsb
           }}
         >
           <Image
-            alt="tomato-thumbnail"
+            alt="aspect-ratio-thumbnail"
             src="./images/aspect-ratio-thumbnail.jpg"
           />
           <Box>
@@ -64,40 +98,6 @@ Here are some examples of how you could use [withArtDirection](https://www.gatsb
             <Text>
               This example will display two different images of different aspect
               ratios
-            </Text>
-          </Box>
-        </Grid>
-        <Box>
-          <Button>VIEW EXAMPLE</Button>
-        </Box>
-      </Grid>
-    </Box>
-  </Link>
-</Card>
-
-<Card>
-  <Link as={GatsbyLink} to="/animation">
-    <Box variant="cards.body">
-      <Grid
-        sx={{
-          alignItems: 'flex-end',
-          gridTemplateColumns: '1fr auto'
-        }}
-      >
-        <Grid
-          sx={{
-            alignItems: 'center',
-            gridTemplateColumns: 'auto 1fr'
-          }}
-        >
-          <Image alt="tomato-thumbnail" src="./images/lemon-thumbnail.jpg" />
-          <Box>
-            <Heading as="h3" variant="styles.h3">
-              Animation
-            </Heading>
-            <Text>
-              This example will iterate through frames of an animation walk
-              cycle
             </Text>
           </Box>
         </Grid>
@@ -125,7 +125,7 @@ Here are some examples of how you could use [withArtDirection](https://www.gatsb
           }}
         >
           <Image
-            alt="tomato-thumbnail"
+            alt="desktop-first-thumbnail"
             src="./images/desktop-first-thumbnail.jpg"
           />
           <Box>
@@ -146,8 +146,42 @@ Here are some examples of how you could use [withArtDirection](https://www.gatsb
   </Link>
 </Card>
 
+<Card>
+  <Link as={GatsbyLink} to="/printer">
+    <Box variant="cards.body">
+      <Grid
+        sx={{
+          alignItems: 'flex-end',
+          gridTemplateColumns: '1fr auto'
+        }}
+      >
+        <Grid
+          sx={{
+            alignItems: 'center',
+            gridTemplateColumns: 'auto 1fr'
+          }}
+        >
+          <Image alt="printer-thumbnail" src="./images/printer-thumbnail.jpg" />
+          <Box>
+            <Heading as="h3" variant="styles.h3">
+              Printer
+            </Heading>
+            <Text>
+              This example will display a different image when the page is
+              printed
+            </Text>
+          </Box>
+        </Grid>
+        <Box>
+          <Button>VIEW EXAMPLE</Button>
+        </Box>
+      </Grid>
+    </Box>
+  </Link>
+</Card>
+
 </Grid>
 
 <Divider />
 
-The `src` for these examples can be found here: <Link href="https://github.com/PaulieScanlon/gatsby-plugin-image-with-art-direction" target="_blank" rel="noopener">https://github.com/PaulieScanlon/gatsby-plugin-image-with-art-direction</Link>
+The `src` for these examples can be found <Link href="https://github.com/PaulieScanlon/gatsby-plugin-image-with-art-direction" target="_blank" rel="noopener">here</Link>
