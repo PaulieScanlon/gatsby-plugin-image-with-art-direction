@@ -1,4 +1,13 @@
 module.exports = {
+  siteMetadata: {
+    name: `withArtDirection`,
+    description: `A gatsby-plugin-image demo`,
+    keywords: [`gatsby`, `gatsbyjs`, `gatsby-plugin-image`],
+    siteUrl: `https://gatsbypluginimagewithartdirect.gatsbyjs.io/`,
+    siteImage: `images/with-art-direction-og-image.jpg`,
+    lang: `en-gb`,
+    type: `website`
+  },
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
@@ -45,6 +54,7 @@ module.exports = {
         }
       }
     },
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-gatsby-cloud`,
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
