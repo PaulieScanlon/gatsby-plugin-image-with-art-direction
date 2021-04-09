@@ -3,9 +3,6 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage, getImage, withArtDirection } from 'gatsby-plugin-image';
 import { Box } from 'theme-ui';
 
-import theme from '../gatsby-plugin-theme-ui';
-const min = parseInt(theme.breakpoints[0], 10);
-
 const Lemon = () => {
   const {
     allFile: { nodes }
@@ -28,16 +25,19 @@ const Lemon = () => {
 
   const images = withArtDirection(
     getImage(nodes[0]),
-    [].concat(...new Array(29).fill(nodes)).map((frame, index) => {
-      return {
-        media: `(max-width: ${min + index}px)`,
-        image: getImage(frame)
-      };
-    })
+    []
+      .concat(...new Array(29).fill(nodes))
+      .map((frame, index) => {
+        return {
+          media: `(min-width: ${576 + index}px)`,
+          image: getImage(frame)
+        };
+      })
+      .reverse()
   );
 
   return (
-    <Box>{images ? <GatsbyImage alt="tomato" image={images} /> : null}</Box>
+    <Box>{images ? <GatsbyImage alt="lemon" image={images} /> : null}</Box>
   );
 };
 

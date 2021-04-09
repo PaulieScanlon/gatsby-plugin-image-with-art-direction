@@ -3,8 +3,6 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage, getImage, withArtDirection } from 'gatsby-plugin-image';
 import { Box } from 'theme-ui';
 
-import theme from '../gatsby-plugin-theme-ui';
-
 const AspectRatio = () => {
   const {
     allFile: { nodes }
@@ -30,7 +28,7 @@ const AspectRatio = () => {
 
   const images = withArtDirection(getImage(nodes[0]), [
     {
-      media: `(max-width: ${parseInt(theme.breakpoints[0], 10) - 1}px)`,
+      media: `(max-width: 576px)`,
       image: getImage(nodes[1])
     }
   ]);
@@ -39,7 +37,12 @@ const AspectRatio = () => {
     <Box
       sx={{
         '.art-directed': {
-          height: [600, 'auto']
+          height: 'auto'
+        },
+        '@media (max-width: 576px)': {
+          '.art-directed': {
+            height: 600
+          }
         }
       }}
     >
